@@ -1,0 +1,19 @@
+SPP - Simple Page Populator, was designed to assist with the creation of CCLayer's for a level select scroller (CCScrollLayer https://github.com/givp/Cocos2d-Menu-Scroller). 
+
+Instead of creating each of the layers by hand and then adding them to the scroller, SPP iterates through and creates the buttons and text I need on my level select screen. Its still a little rough, but it works as required.
+
+The main point of interest is the creation of the menu with the buildLevelButtons function, where I make the required buttons along with their desired position, and then add them to the menu. This meant that I didn't need to copy/paste all of my menu generation code for each stage.
+
+References to Config can be ignored, Its what I use for my data storage and retrieval, and I store all of the level information in external .plists. These calls for values or strings can be replaced.
+
+
+
+Usage:
+
+Simple call, where I imput the stage number, which in turn iterates through my plists for the name of the stage, which leaderboard it references and the level buttons. 
+
+SPP *pageOne = [[[SPP alloc] initWithLevelSelectofStage:1 padding:ccp(190, 80)] autorelease];
+
+
+Feedback of any kind is appreciated.
+Scott Rapson, scott@26oclock.com
